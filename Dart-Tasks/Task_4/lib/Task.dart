@@ -32,6 +32,11 @@ class Task extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              Image.asset(
+                "assets/front (1).jpg",
+                width: width,
+                height: height * 0.3,
+              ),
               SizedBox(
                 width: width * 0.2,
                 child: Center(
