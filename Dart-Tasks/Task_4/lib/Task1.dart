@@ -105,6 +105,11 @@ class NewTask extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    Image.asset(
+                "assets/front (1).jpg",
+                width: width,
+                height: height * 0.3,
+              ),
                     const Text("April 29/2023"),
                     IconButton(
                         onPressed: () {},
