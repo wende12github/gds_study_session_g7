@@ -38,7 +38,7 @@ class Frontpage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                "image/todo.jpg",
+                "assets/images (1).jpg",
                 width: width,
                 height: height * 0.4,
               ),
