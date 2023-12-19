@@ -50,6 +50,11 @@ class Task extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Image.asset(
+                "assets/front (1).jpg",
+                width: width,
+                height: height * 0.3,
+              ),
                     Text(
                       name,
                       style: const TextStyle(
