@@ -51,13 +51,18 @@ class _HomePageState extends State<HomePage> {
                   child: Padding(
                     padding: EdgeInsets.all(8.0),
                     child: TextField(
-                        decoration: InputDecoration(
-                            hintText: 'Looking for...',
-                            hintStyle: TextStyle(
-                              fontSize: 17,
-                              color: Colors.black,
-                            ),
-                            border: InputBorder.none)),
+                      decoration: InputDecoration(
+                        hintText: 'Looking for...',
+                        hintStyle: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black,
+                        ),
+                        suffixIcon: Icon(
+                          Icons.search,
+                          size: 30,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -90,58 +95,93 @@ class _HomePageState extends State<HomePage> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
-                              Color.fromARGB(255, 92, 102, 245),
-                              Color.fromARGB(255, 128, 162, 237),
-                              Colors.lightBlue,
+                              Color.fromARGB(255, 57, 116, 243),
+                              Color.fromARGB(255, 105, 149, 243),
+                              Color.fromARGB(255, 3, 108, 156),
                             ])),
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
+                    child: const Padding(
+                      padding: EdgeInsets.all(15.0),
                       child: Column(children: [
-                        const Row(children: [
+                        Row(children: [
                           Spacer(),
                           Text(
-                            "sep 2022",
+                            "sep 23 2023",
                             style: TextStyle(fontSize: 15, color: Colors.white),
                           ),
                         ]),
-                        const SizedBox(height: 10),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          // ignore: avoid_unnecessary_containers
-                          child: Container(
-                            child: const Center(
-                              child: Column(children: [
-                                Text(
-                                  "Today a Reader, ",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Tommorow a Leader",
-                                  style: TextStyle(
-                                    fontSize: 25,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.translate,
-                                        color: Colors.white,
-                                      ),
-                                      Icon(Icons.bookmark, color: Colors.white),
-                                      Icon(Icons.share, color: Colors.white),
-                                    ]),
-                              ]),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            SizedBox(
+                              width: 20,
                             ),
-                          ),
-                        )
+                            Icon(
+                              Icons.pause,
+                              size: 40,
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(top: 10.0),
+                                  child: Text(
+                                    "Today a reader\n Tomorrow a",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w300,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  "LEADER",
+                                  style: TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.w900,
+                                      color: Colors.white),
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.save_outlined,
+                                      size: 30,
+                                      color: Colors.white,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Icon(
+                                      Icons.bookmark_border_outlined,
+                                      color: Colors.white,
+                                      size: 30,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Icon(
+                                      Icons.share,
+                                      size: 30,
+                                      color: Colors.white,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Icon(
+                              Icons.pause,
+                              size: 40,
+                              color: Colors.white,
+                            ),
+                          ],
+                        ),
                       ]),
                     ),
                   ))),
@@ -166,7 +206,7 @@ class _HomePageState extends State<HomePage> {
                   width: 100,
                   height: 50,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 192, 192, 194),
+                    color: const Color.fromARGB(255, 192, 192, 194),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Center(
@@ -197,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                       height: 50,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 175, 175, 177),
+                        color: const Color.fromARGB(255, 175, 175, 177),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: const Center(
@@ -225,7 +265,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                       height: 50,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 152, 152, 153),
+                        color: const Color.fromARGB(255, 152, 152, 153),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: const Center(
@@ -253,7 +293,7 @@ class _HomePageState extends State<HomePage> {
                 child: Container(
                   height: 50,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 143, 143, 145),
+                    color: const Color.fromARGB(255, 143, 143, 145),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Center(
@@ -284,7 +324,7 @@ class _HomePageState extends State<HomePage> {
                 child: Container(
                   height: 50,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 154, 154, 155),
+                    color: const Color.fromARGB(255, 154, 154, 155),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Center(
@@ -448,6 +488,19 @@ class _HomePageState extends State<HomePage> {
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                 ]),
               ),
+              const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Text("New Books",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      Spacer(),
+                      Icon(Icons.navigate_next, color: Colors.black),
+                    ],
+                  )),
               Padding(
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: Column(children: [
