@@ -8,6 +8,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // ignore: prefer_typing_uninitialized_variables
   var text;
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class _HomePageState extends State<HomePage> {
         actions: <Widget>[
           ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
-            child: Container(
+            child: const SizedBox(
               width: 22.0,
               height: 22.0,
             ),
@@ -95,9 +96,9 @@ class _HomePageState extends State<HomePage> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
-                              Color.fromARGB(255, 57, 116, 243),
-                              Color.fromARGB(255, 105, 149, 243),
-                              Color.fromARGB(255, 3, 108, 156),
+                              Color(0XFF447EE3),
+                              Color(0XFF578EE9),
+                              Color(0XFF75A7FF),
                             ])),
                     child: const Padding(
                       padding: EdgeInsets.all(15.0),
@@ -132,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                                   child: Text(
                                     "Today a reader\n Tomorrow a",
                                     style: TextStyle(
-                                      fontSize: 20,
+                                      fontSize: 22,
                                       fontWeight: FontWeight.w300,
                                       color: Colors.white,
                                     ),
@@ -141,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                                 Text(
                                   "LEADER",
                                   style: TextStyle(
-                                      fontSize: 30,
+                                      fontSize: 36,
                                       fontWeight: FontWeight.w900,
                                       color: Colors.white),
                                 ),
@@ -149,23 +150,23 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Icon(
                                       Icons.save_outlined,
-                                      size: 30,
+                                      size: 34,
                                       color: Colors.white,
                                     ),
                                     SizedBox(
-                                      width: 10,
+                                      width: 15,
                                     ),
                                     Icon(
                                       Icons.bookmark_border_outlined,
                                       color: Colors.white,
-                                      size: 30,
+                                      size: 34,
                                     ),
                                     SizedBox(
-                                      width: 10,
+                                      width: 15,
                                     ),
                                     Icon(
                                       Icons.share,
-                                      size: 30,
+                                      size: 34,
                                       color: Colors.white,
                                     ),
                                   ],
@@ -366,7 +367,7 @@ class _HomePageState extends State<HomePage> {
                 Icon(Icons.navigate_next, color: Colors.black),
               ],
             )),
-        Padding(
+        Container(
           padding: const EdgeInsets.all(10),
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -374,7 +375,7 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
                 child: Column(children: [
-                  Image.asset('assets/ፓፒዮ.png'),
+                  Image.asset('assets/ፓፒዮ.jpg'),
                   Container(
                     width: 100,
                     height: 150,
@@ -488,19 +489,27 @@ class _HomePageState extends State<HomePage> {
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                 ]),
               ),
-              const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      Text("New Books",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          )),
-                      Spacer(),
-                      Icon(Icons.navigate_next, color: Colors.black),
-                    ],
-                  )),
+            ]),
+          ),
+        ),
+        const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Text("New Books",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    )),
+                Spacer(),
+                Icon(Icons.navigate_next, color: Colors.black),
+              ],
+            )),
+        Padding(
+          padding: const EdgeInsets.all(10),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(children: [
               Padding(
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: Column(children: [
@@ -681,7 +690,7 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.all(10),
                 child: Column(children: [
-                  Image.asset('assets/born.jpg'),
+                  Image.asset('assets/evolution.jpg'),
                   Container(
                     width: 150,
                     height: 200,
