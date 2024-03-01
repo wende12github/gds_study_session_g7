@@ -6,7 +6,7 @@ void main() {
 }
 
 class Todolist extends StatelessWidget {
-  const Todolist({super.key});
+  const Todolist({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class Todolist extends StatelessWidget {
           //useMaterial3: true,
           ),
       debugShowCheckedModeBanner: false,
-      home: Frontpage(),
+      home: const Frontpage(),
     );
   }
 }
@@ -70,7 +70,7 @@ class Frontpage extends StatelessWidget {
                 color: Color.fromARGB(255, 123, 146, 165),
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return const Taskslist();
+                    return Taskslist();
                   }));
                 },
                 minWidth: width * 0.5,
