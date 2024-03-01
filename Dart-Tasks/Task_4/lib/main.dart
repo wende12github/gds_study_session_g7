@@ -13,6 +13,8 @@ class Todolist extends StatelessWidget {
     return MaterialApp(
       title: "Todolist",
       theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromRGBO(5, 17, 20, 7))
           //useMaterial3: true,
           ),
       debugShowCheckedModeBanner: false,
@@ -29,6 +31,25 @@ class Frontpage extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.sort),
+          color: Colors.black,
+          iconSize: 25,
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        backgroundColor: Colors.white,
+        title: Center(
+            child: Container(
+          padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [Text("TODO LIST APP"), Icon(Icons.book)],
+          ),
+        )),
+      ),
       body: Container(
         color: Color.fromARGB(255, 71, 46, 46),
         child: Padding(
@@ -38,7 +59,7 @@ class Frontpage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                "assets/images (1).jpg",
+                "assets/front (1).jpg",
                 width: width,
                 height: height * 0.4,
               ),
