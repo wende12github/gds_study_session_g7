@@ -33,7 +33,7 @@ class Taskslist extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Center(
             child: Image.asset(
-              "image/front.jpg",
+              "image/images (1).jpg",
               width: width * 0.8,
               height: height * 0.30,
             ),
