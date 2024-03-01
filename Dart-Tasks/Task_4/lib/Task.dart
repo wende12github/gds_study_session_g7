@@ -56,8 +56,8 @@ class Task extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Image.asset(
-                "assets/front (1).jpg",
-                width: width,
+                "assets/images (1).jpg",
+                width: width * 0.8,
                 height: height * 0.3,
               ),
                     Text(
