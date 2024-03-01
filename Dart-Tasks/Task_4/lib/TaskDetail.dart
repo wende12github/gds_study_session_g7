@@ -29,6 +29,7 @@ class Detail extends StatelessWidget {
         child: Column(children: [
           Image.asset(
             "image/todolist.png",
+            width: width * 0.8,
             height: height * 0.30,
           ),
           const Row(
