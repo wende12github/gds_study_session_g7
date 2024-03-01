@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NewTask extends StatelessWidget {
-  const NewTask({super.key});
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  NewTask({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +20,16 @@ class NewTask extends StatelessWidget {
           },
         ),
         actions: <Widget>[
-          IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
+          IconButton(
+            onPressed: () {}, 
+            icon: const Icon(Icons.more_vert),
+          ),
         ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(25.0),
+        child: Form(
+          key: _formKey,
         child: Column(children: [
           const Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -168,6 +174,7 @@ class NewTask extends StatelessWidget {
             ),
           ))
         ]),
+       ),
       ),
     );
   }
