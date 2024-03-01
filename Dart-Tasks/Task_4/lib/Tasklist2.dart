@@ -3,13 +3,15 @@ import 'package:first_flutter_app/Task1.dart';
 import 'package:first_flutter_app/Task.dart';
 
 class Taskslist extends StatelessWidget {
-  const Taskslist({super.key});
-
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+  Taskslist({Key? key}) : super(key: key)
+    
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -20,7 +22,7 @@ class Taskslist extends StatelessWidget {
             color: Colors.red.shade300,
           ),
         ),
-        title: const Text("Todo list"),
+        title: const Text("Todo List"),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.more_vert),
@@ -41,7 +43,7 @@ class Taskslist extends StatelessWidget {
           const Row(
             children: [
               Text(
-                "Tasks list",
+                "Tasks List",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ],
@@ -65,7 +67,7 @@ class Taskslist extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return const NewTask();
+                      return NewTask();
                     }));
                   },
                   color: Colors.red.shade300,
